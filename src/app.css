@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@theme {
+	--color-background: #12181b;
+	--color-red: #e76f51;
+	--color-orange: #f4a261;
+	--color-yellow: #e9c46a;
+	--color-green: #2a9d8f;
+	--color-darkblue: #264653;
+	--color-black: #020617;
+	--color-gray: #cbd5e1;
+
+	--font-pixelify: 'Pixelify Sans Variable', system-ui;
+	--font-mulish: 'Mulish Variable', sans-serif;
+
+	--max-width-8xl: 100rem;
+}
+
+:root {
+	--font-body: var(--font-mulish);
+	font-family: var(--font-body);
+}
