@@ -2,7 +2,6 @@
 	import { buttonColors } from '$lib/button-colors.js';
 	import Button from '$lib/components/button.svelte';
 	import { Card } from '$lib/components/components.js';
-	import CommandsSection from '$lib/components/home/commands-section.svelte';
 	import HeroSection from '$lib/components/home/hero-section.svelte';
 	import { DiscordIcon, FpsmsIcon, GithubIcon } from '$lib/components/icons/icon.js';
 	import { config } from '$lib/utils/config.js';
@@ -27,11 +26,6 @@
 <div class="relative">
 	<!-- Hero Section with Background -->
 	<HeroSection />
-
-	<!-- Gradient Transition Zone -->
-	<!-- <div class="relative z-[8] h-20 bg-gradient-to-b from-black via-black to-black"></div> -->
-
-	<!-- <CommandsSection {groupedCommands} /> -->
 
 	<div class="relative h-[130vh]">
 		<div class="bg-footer-background absolute inset-0 z-0 opacity-80 brightness-60"></div>
