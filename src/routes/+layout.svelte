@@ -4,10 +4,11 @@
 	// Fonts
 	import '@fontsource-variable/pixelify-sans';
 	import '@fontsource-variable/mulish';
-	import { Header } from '$lib/components/components.js';
+	import { Footer, Header } from '$lib/components/components.js';
 
 	let { children } = $props();
 </script>
 
 <Header></Header>
 {@render children()}
+<Footer></Footer>
