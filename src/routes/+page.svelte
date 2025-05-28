@@ -11,6 +11,22 @@
 	let { groupedCommands } = data;
 </script>
 
+<svelte:head>
+	<title>Join Our Community - Josephine Discord Bot</title>
+	<meta
+		name="description"
+		content="Join Josephine, the ultimate Discord bot, and manage your community with ease. Connect with over 1,400,000 servers and be part of the fun!"
+	/>
+	<meta name="keywords" content="Discord, Bot, Community, Josephine, Join, Servers" />
+	<meta property="og:title" content="Join Our Community - Josephine Discord Bot" />
+	<meta
+		property="og:description"
+		content="Join Josephine, the ultimate Discord bot, and manage your community with ease. Connect with over 1,400,000 servers and be part of the fun!"
+	/>
+	<meta property="og:image" content="/path/to/image.jpg" />
+	<meta property="og:url" content="https://yourwebsite.com" />
+</svelte:head>
+
 <div class="relative">
 	<!-- Hero Section with Background -->
 	<HeroSection />
