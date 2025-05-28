@@ -14,10 +14,10 @@
 
 	<!-- content layer -->
 	<div
-		class=" text-gray relative z-10 -mt-20 flex flex-col items-center text-center font-extrabold"
+		class=" text-gray relative z-10 -mt-20 flex flex-col items-center p-4 text-center font-extrabold"
 	>
 		<div
-			class="from-red to-yellow bg-gradient-to-b bg-clip-text text-6xl text-transparent sm:text-7xl md:text-8xl lg:text-9xl"
+			class="from-red to-yellow bg-gradient-to-b bg-clip-text text-5xl text-transparent sm:text-7xl md:text-8xl lg:text-9xl"
 		>
 			<h1 class="font-pixelify">JOSEPHINE</h1>
 			<h2 class="font-pixelify">DISCORD BOT</h2>

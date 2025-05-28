@@ -16,9 +16,9 @@
 	<HeroSection />
 
 	<!-- Gradient Transition Zone -->
-	<div class="relative z-[8] h-20 bg-gradient-to-b from-black via-black to-black"></div>
+	<!-- <div class="relative z-[8] h-20 bg-gradient-to-b from-black via-black to-black"></div> -->
 
-	<CommandsSection {groupedCommands} />
+	<!-- <CommandsSection {groupedCommands} /> -->
 
 	<div class="relative h-[130vh]">
 		<div class="bg-footer-background absolute inset-0 z-0 opacity-80 brightness-60"></div>
