@@ -51,7 +51,7 @@
 					real ones hang out and grow together. So don’t just scroll — join the chaos, claim your
 					spot, and let’s make some noise!
 				</p>
-				<Button color={buttonColors.yellow} className="mx-auto mt-5 text-2xl">Join Here!</Button>
+				<Button color={buttonColors.yellow} className="mx-auto mt-5 text-2xl">join here!</Button>
 			</div>
 		</div>
 	</div>
