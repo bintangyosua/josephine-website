@@ -1,6 +1,16 @@
 # release.ps1
-$envVars = Get-Content ".env" | ForEach-Object {
-    $pair = $_ -split "="
-    Set-Item -Path "env:$($pair[0])" -Value $pair[1]
+
+# Load environment variables from .env file
+Get-Content ".env" | ForEach-Object {
+    if ($_ -match "^\s*([^#][^=]*)=(.*)$") {
+        $key = $matches[1].Trim()
+        $value = $matches[2].Trim()
+        [System.Environment]::SetEnvironmentVariable($key, $value, "Process")
+    }
 }
-CI=true npx semantic-release
+
+# Set CI variable
+[System.Environment]::SetEnvironmentVariable("CI", "true", "Process")
+
+# Run semantic-release
+npx semantic-release
