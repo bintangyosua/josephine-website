@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { buttonColors } from '$lib/button-colors.js';
 	import Button from '$lib/components/button.svelte';
 	import { Card } from '$lib/components/components.js';
@@ -12,7 +12,7 @@
 	let categories = Object.keys(groupedCommands);
 	let activeTab = categories[0]; // tab aktif default
 
-	function selectTab(cat) {
+	function selectTab(cat: string) {
 		activeTab = cat;
 	}
 </script>
@@ -118,6 +118,6 @@
 	}
 	.tab.active {
 		font-weight: bold;
-		border-color: var(--color-orange);
+		border-color: var(--color-gray);
 	}
 </style>

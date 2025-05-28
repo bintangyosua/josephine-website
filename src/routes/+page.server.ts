@@ -1,9 +1,9 @@
-import { API_URL } from '$env/static/private';
+import { PUBLIC_API_URL } from '$env/static/public';
 import type { Command } from '$lib/types/index.js';
 import axios from 'axios';
 
 export async function load() {
-	const res = await axios.get(`${API_URL}/commands`);
+	const res = await axios.get(`${PUBLIC_API_URL}/commands`);
 	const commands = res.data as Command[];
 
 	// Tipe object hasil grouping: key = category, value = array Command
