@@ -1,8 +1,20 @@
 <script>
 	import { buttonColors } from '$lib/button-colors.js';
 	import Button from '$lib/components/button.svelte';
+	import { Card } from '$lib/components/components.js';
 	import { DiscordIcon, FpsmsIcon, GithubIcon } from '$lib/components/icons/icon.js';
 	import { config } from '$lib/utils/config.js';
+
+	export let data;
+	let { groupedCommands } = data;
+
+	// Ambil list kategori sebagai tab labels
+	let categories = Object.keys(groupedCommands);
+	let activeTab = categories[0]; // tab aktif default
+
+	function selectTab(cat) {
+		activeTab = cat;
+	}
 </script>
 
 <div class="relative">
@@ -13,7 +25,7 @@
 
 		<!-- gradient overlay for smooth transition -->
 		<div
-			class="absolute inset-0 z-[5] bg-gradient-to-b from-transparent via-black/50 to-black"
+			class="absolute inset-0 z-[5] bg-gradient-to-b from-transparent via-black/30 to-black"
 		></div>
 
 		<!-- content layer -->
@@ -52,9 +64,39 @@
 	</div>
 
 	<!-- Gradient Transition Zone -->
-	<div class="relative z-[8] h-48 bg-gradient-to-b from-black/95 via-black to-black"></div>
+	<div class="relative z-[8] h-20 bg-gradient-to-b from-black via-black to-black"></div>
 
-	<div class="h-[400px] bg-black"></div>
+	<div class="text-gray bg-black">
+		<div class="mx-auto flex max-w-5xl flex-col">
+			<h1 class="font-pixelify text-center text-7xl">COMMANDS</h1>
+			<p class="mt-4 text-center">
+				Turn your community into <b>THE</b> place to be! Join more than 1,400,000 Discord servers that
+				use Tatsu to manage and build a fun and inviting community.
+			</p>
+			<div class="tabs mt-10">
+				{#each categories as category}
+					<button
+						class="tab {category === activeTab ? 'active' : ''}"
+						on:click={() => selectTab(category)}
+					>
+						{category}
+					</button>
+				{/each}
+			</div>
+
+			<div class="mb-40 grid grid-cols-3 gap-10">
+				{#each groupedCommands[activeTab] as command}
+					<Card className="flex flex-col gap-2 bg-transparent">
+						<div class="flex w-full flex-row justify-between">
+							<div class="font-extrabold">{command.name}</div>
+							<div class="font-bold">{command.category}</div>
+						</div>
+						<div class="w-full">{command.description}</div>
+					</Card>
+				{/each}
+			</div>
+		</div>
+	</div>
 </div>
 
 <style>
@@ -62,5 +104,20 @@
 		background-image: url('/background-car-home.gif');
 		background-size: cover;
 		background-position: center bottom;
+	}
+
+	.tabs {
+		display: flex;
+		gap: 1rem;
+		margin-bottom: 1rem;
+	}
+	.tab {
+		padding: 0.5rem 1rem;
+		cursor: pointer;
+		border-bottom: 2px solid transparent;
+	}
+	.tab.active {
+		font-weight: bold;
+		border-color: var(--color-orange);
 	}
 </style>
