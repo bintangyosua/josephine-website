@@ -13,7 +13,7 @@
 	}
 </script>
 
-<div class="text-gray bg-black">
+<div class="text-gray bg-black p-4">
 	<div class="mx-auto flex max-w-5xl flex-col">
 		<h1 class="font-pixelify text-center text-7xl">COMMANDS</h1>
 		<p class="mt-4 text-center">
@@ -31,7 +31,7 @@
 			{/each}
 		</div>
 
-		<div class="mb-40 grid grid-cols-3 gap-10">
+		<div class="mb-40 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
 			{#each groupedCommands[activeTab] as command}
 				<Card className="flex flex-col gap-2 bg-transparent">
 					<div class="flex w-full flex-row justify-between">

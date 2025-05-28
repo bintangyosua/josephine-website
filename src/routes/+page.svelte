@@ -26,7 +26,7 @@
 		<div
 			class="absolute inset-0 z-[5] grid place-items-center bg-gradient-to-t from-transparent via-black/30 to-black"
 		>
-			<div class="flex max-w-7xl flex-col gap-3 text-center">
+			<div class="flex max-w-7xl flex-col gap-3 px-4 text-center">
 				<h2
 					class="from-darkblue font-pixelify to-gray bg-gradient-to-b bg-clip-text text-6xl text-transparent sm:text-7xl md:text-8xl lg:text-9xl"
 				>
