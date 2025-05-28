@@ -1,11 +1,8 @@
-# This config was automatically generated from your source code
-# Stacks detected: deps:node:.
 version: 2.1
 orbs:
   node: circleci/node@5
 jobs:
   build-node:
-    # Build node project
     executor: node/default
     steps:
       - checkout
@@ -17,7 +14,6 @@ jobs:
       - run:
           name: Create the ~/artifacts directory if it doesn't exist
           command: mkdir -p ~/artifacts
-      # Copy output to artifacts dir
       - run:
           name: Copy artifacts
           command: cp -R build dist public .output .next .docusaurus ~/artifacts 2>/dev/null || true
@@ -30,27 +26,27 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install GitHub CLI
+          command: |
+            sudo apt-get update && \
+            sudo apt-get install -y curl && \
+            curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg && \
+            sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg && \
+            echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null && \
+            sudo apt-get update && \
+            sudo apt-get install -y gh
+      - run:
+          name: Authenticate GitHub CLI
+          command: echo $GH_TOKEN | gh auth login --with-token
+      - run:
           name: Create GitHub Release
           command: |
-            # Install GitHub CLI
-            sudo apt-get update && sudo apt-get install -y gh
-            # Login ke GitHub CLI via token (gunakan environment variable)
-            echo $GH_TOKEN | gh auth login --with-token
-            # Create release with tag (sesuaikan tagnya)
             gh release create v$(date +%Y%m%d%H%M%S) -t "Release $(date)" -n "Automated release by CircleCI"
-  # deploy:
-  #   # This is an example deploy job, not actually used by the workflow
-  #   docker:
-  #     - image: cimg/base:stable
-  #   steps:
-  #     # Replace this with steps to deploy to users
-  #     - run:
-  #         name: deploy
-  #         command: '#e.g. ./deploy.sh'
 workflows:
-  build:
+  build_and_release:
     jobs:
       - build-node
-    # - deploy:
-    #     requires:
-    #       - build-node
+      - release:
+          requires:
+            - build-node
+          context: github-release-context
