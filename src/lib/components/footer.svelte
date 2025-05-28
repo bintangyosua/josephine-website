@@ -7,9 +7,11 @@
 	<div class="max-w-8xl mx-auto w-full p-4 text-gray-300 sm:p-6 md:p-8 lg:p-10">
 		<div class="mb-6 flex flex-col items-center justify-between gap-2 sm:flex-row">
 			<span class="font-pixelify text-3xl">Josephine</span>
-			<span class="flex items-center gap-1 text-lg"
-				>Made with <LovePixelIcon size={24} /> in Purwokerto, Indonesia</span
-			>
+			<span class="text-lg whitespace-nowrap">
+				<span class="inline-flex items-center gap-1">
+					Made with <LovePixelIcon size={20} /> in Purwokerto, Indonesia
+				</span>
+			</span>
 		</div>
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
 			{#each Object.entries(footerItems) as [section, items]}
