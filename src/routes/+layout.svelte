@@ -4,7 +4,7 @@
 	// Fonts
 	import '@fontsource-variable/pixelify-sans';
 	import '@fontsource-variable/mulish';
-	import Header from '$lib/components/header.svelte';
+	import { Header } from '$lib/components/components.js';
 
 	let { children } = $props();
 </script>

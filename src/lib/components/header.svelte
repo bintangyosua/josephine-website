@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { buttonColors } from '$lib/button-colors.js';
+	import { config } from '$lib/utils/config.js';
 	import Button from './button.svelte';
 </script>
 
@@ -14,10 +15,10 @@
 				</a>
 				<ul class="flex items-center gap-3 text-lg sm:gap-4 md:gap-5">
 					<li class="flex items-center gap-4">
-						<a href={'#'}>
+						<a href={config.inviteBot}>
 							<Button color={buttonColors.darkblue}>invite bot</Button>
 						</a>
-						<a href={'#'}>
+						<a href={config.joinServer}>
 							<Button color={buttonColors.red}>join server</Button>
 						</a>
 					</li>

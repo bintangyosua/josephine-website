@@ -2,6 +2,7 @@
 	import { buttonColors } from '$lib/button-colors.js';
 	import Button from '$lib/components/button.svelte';
 	import { DiscordIcon, FpsmsIcon, GithubIcon } from '$lib/components/icons/icon.js';
+	import { config } from '$lib/utils/config.js';
 </script>
 
 <div class="relative">
@@ -29,7 +30,9 @@
 				Turn your community into the place to be! Join more than 1,400,000 Discord servers that use
 				Josephine to manage and build a fun and inviting community.
 			</p>
-			<Button color={buttonColors.yellow} className="text-2xl mt-5">start here</Button>
+			<a href={config.inviteBot}>
+				<Button color={buttonColors.yellow} className="text-2xl mt-5">start here</Button>
+			</a>
 			<div class="mt-10 flex flex-col items-center gap-2 font-mono sm:flex-row sm:gap-12">
 				<p class="text-gray text-xl font-semibold">SUPPORTED BY</p>
 				<div class="flex items-center gap-6 text-4xl">
