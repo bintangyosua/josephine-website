@@ -1,3 +1,5 @@
+import { config } from './config.js';
+
 export const footerItems = {
 	Company: [
 		{
@@ -31,7 +33,7 @@ export const footerItems = {
 			label: 'Commands'
 		},
 		{
-			link: '#',
+			link: config.inviteBot,
 			label: 'Invite Bot'
 		},
 		{
@@ -39,7 +41,7 @@ export const footerItems = {
 			label: 'Status'
 		},
 		{
-			link: '#',
+			link: config.joinServer,
 			label: 'Support Server'
 		}
 	],
