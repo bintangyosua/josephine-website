@@ -16,10 +16,10 @@
 				<ul class="flex items-center gap-3 text-lg sm:gap-4 md:gap-5">
 					<li class="flex items-center gap-4">
 						<a href={config.inviteBot}>
-							<Button color={buttonColors.darkblue}>invite bot</Button>
+							<Button color={buttonColors.gray}>invite bot</Button>
 						</a>
 						<a href={config.joinServer}>
-							<Button color={buttonColors.red}>join server</Button>
+							<Button color={buttonColors.green}>join server</Button>
 						</a>
 					</li>
 				</ul>

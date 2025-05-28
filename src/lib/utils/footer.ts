@@ -52,23 +52,23 @@ export const footerItems = {
 	],
 	Stacks: [
 		{
-			link: '#',
+			link: 'https://nodejs.org/en',
 			label: 'Nodejs'
 		},
 		{
-			link: '#',
+			link: 'https://svelte.dev/',
 			label: 'Sveltekit'
 		},
 		{
-			link: '#',
+			link: 'https://discord.js.org/',
 			label: 'Discordjs'
 		},
 		{
-			link: '#',
+			link: 'https://hono.dev/',
 			label: 'Hono'
 		},
 		{
-			link: '#',
+			link: 'https://www.mongodb.com/',
 			label: 'MongoDB'
 		}
 	]

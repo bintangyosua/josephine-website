@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { config } from '$lib/utils/config.js';
 	import { footerItems } from '$lib/utils/footer.js';
 	import { DiscordIcon, FpsmsIcon, GithubIcon, LovePixelIcon } from './icons/icon.js';
 </script>
@@ -26,7 +27,10 @@
 			{/each}
 		</div>
 		<div class="mt-6 flex flex-col-reverse items-center justify-between gap-2 text-sm sm:flex-row">
-			<div>© 2025 <b>Minuettaro</b>, All Rights Reserved.</div>
+			<div>
+				© 2025 <a href={config.minuettaro} class="font-extrabold">Minuettaro</a>, All Rights
+				Reserved.
+			</div>
 			<div class="flex items-center gap-2 text-4xl">
 				<a href="https://github.com" target="_blank">
 					<span><GithubIcon size={30} /></span>
