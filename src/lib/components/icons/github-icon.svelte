@@ -1,6 +1,6 @@
 <script lang="ts">
-	export let color: string = 'currentColor';
 	export let size: number = 24;
+	export let color: string = 'currentColor';
 </script>
 
 <svg

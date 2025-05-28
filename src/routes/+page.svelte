@@ -1,8 +1,7 @@
 <script>
 	import { buttonColors } from '$lib/button-colors.js';
 	import Button from '$lib/components/button.svelte';
-	import DiscordIcon from '$lib/components/icons/discord-icon.svelte';
-	import GithubIcon from '$lib/components/icons/github-icon.svelte';
+	import { DiscordIcon, FpsmsIcon, GithubIcon } from '$lib/components/icons/icon.js';
 </script>
 
 <div class="relative">
@@ -39,14 +38,10 @@
 					</a>
 
 					<a href="https://fps.ms/" target="_blank">
-						<img
-							src="/fps-icon.png"
-							class="max-h-[60px] w-auto max-w-[60px] object-contain brightness-110 grayscale"
-							alt="fps.ms"
-						/>
+						<span><FpsmsIcon size={58} color="currentColor" /></span>
 					</a>
 					<a href="https://discord.com" target="_blank">
-						<span><DiscordIcon size={40} /></span>
+						<span><DiscordIcon size={43} /></span>
 					</a>
 				</div>
 			</div>
