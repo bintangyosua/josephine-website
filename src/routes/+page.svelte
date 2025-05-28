@@ -6,9 +6,6 @@
 	import HeroSection from '$lib/components/home/hero-section.svelte';
 	import { DiscordIcon, FpsmsIcon, GithubIcon } from '$lib/components/icons/icon.js';
 	import { config } from '$lib/utils/config.js';
-
-	export let data;
-	let { groupedCommands } = data;
 </script>
 
 <svelte:head>
