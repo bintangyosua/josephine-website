@@ -9,5 +9,8 @@ Get-Content ".env" | ForEach-Object {
     }
 }
 
+# Set CI variable
+[System.Environment]::SetEnvironmentVariable("CI", "true", "Process")
+
 # Run semantic-release
 npx semantic-release
