@@ -1,58 +1,18 @@
-# Svelte library
+<p align="center"><h1 align="center">JOSEPHINE WEB PROFILE</h1></p>
+<p align="center">
+	<img src="https://img.shields.io/github/license/bintangyosua/josephine-website?style=default&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
+	<img src="https://img.shields.io/github/last-commit/bintangyosua/josephine-website?style=default&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/bintangyosua/josephine-website?style=default&color=0080ff" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/bintangyosua/josephine-website?style=default&color=0080ff" alt="repo-language-count">
+</p>
+<br>
 
-Everything you need to build a Svelte library, powered by [`sv`](https://npmjs.com/package/sv).
+## Overview
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
+Welcome to the official website repository of Josephine, the ultimate Discord bot for building fun and welcoming communities! 🌟
 
-## Creating a project
+Josephine is trusted by 1,400,000+ Discord servers to manage, moderate, and grow their communities. This website serves as the landing page, documentation hub, and information center for everything related to Josephine.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## License
 
-```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
-
-## Building
-
-To build your library:
-
-```bash
-npm run package
-```
-
-To create a production version of your showcase app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
+This project is protected under the [MIT](https://github.com/bintangyosua/josephine-website/blob/main/LICENSE) License.
